@@ -14,14 +14,17 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurTableView()
+        
+    }
+    
+   func configurTableView()
+    {
         self.tableView.delegate = self
         self.tableView.dataSource  = self
         self.view = tableView
-        
         // Do any additional setup after loading the view.
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
