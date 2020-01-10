@@ -4,6 +4,7 @@
 //
 //  Created by Naveen Chandra on 10/01/20.
 //  Copyright © 2020 Naveen Chandra. All rights reserved.
+
 //
 
 import UIKit
@@ -11,104 +12,144 @@ import Cartography
 
 class NewsTableViewCell: UITableViewCell {
     
-    let newsImageView = UIImageView()
+    let itemImageView = UIImageView()
     let titleLabel = UILabel()
-    let authorLabel  = UILabel()
-    let dateLabel = UILabel()
     let sourceLabel = UILabel()
     let descriptionLabel = UILabel()
+    let dateLabel = UILabel()
+    let authorLabel = UILabel()
+    
     
     required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!)
-    {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
+        // code to make full bottom border
+        self.preservesSuperviewLayoutMargins = false
+        self.separatorInset = UIEdgeInsets.zero
+        self.layoutMargins = UIEdgeInsets.zero
+        self.selectionStyle = .none
+        //code to make full bottom border
         
-        newsImageView.layer.cornerRadius = 10.0
-        newsImageView.clipsToBounds = true
-        newsImageView.contentMode = .scaleAspectFill
+        
+        
+        itemImageView.layer.cornerRadius = 8.0
+        itemImageView.clipsToBounds = true
+        itemImageView.contentMode = .scaleAspectFill
+        itemImageView.image = UIImage(named: "defaultRestaurantImage")
         
         titleLabel.textColor = UIColor.black
+        titleLabel.sizeToFit()
+        titleLabel.textAlignment = .left
+        titleLabel.numberOfLines = 2
         titleLabel.adjustsFontSizeToFitWidth = false
-        titleLabel.textColor = UIColor.black
         
-        sourceLabel.textColor = UIColor.black
-        sourceLabel.adjustsFontSizeToFitWidth = false
-        sourceLabel.textColor = UIColor.black
         
         authorLabel.textColor = UIColor.black
+        authorLabel.sizeToFit()
+        authorLabel.textAlignment = .left
+        authorLabel.numberOfLines = 1
         authorLabel.adjustsFontSizeToFitWidth = false
-        authorLabel.textColor = UIColor.black
+        
         
         
         
         descriptionLabel.lineBreakMode = .byWordWrapping
-        descriptionLabel.numberOfLines = 2
-        descriptionLabel.lineBreakMode = .byTruncatingTail
-        descriptionLabel.adjustsFontSizeToFitWidth = false
+        descriptionLabel.numberOfLines = 0
         
-        dateLabel.textColor = UIColor.black
-        dateLabel.adjustsFontSizeToFitWidth  = true
+        descriptionLabel.sizeToFit()
+        descriptionLabel.textAlignment = .left
         
         
-        contentView.addSubview(newsImageView)
+        
+        
+        dateLabel.adjustsFontSizeToFitWidth = false
+        dateLabel.textColor = UIColor.red
+        
+        sourceLabel.adjustsFontSizeToFitWidth = false
+        sourceLabel.textColor = UIColor.red
+        
+        
+        
+        contentView.addSubview(itemImageView)
         contentView.addSubview(titleLabel)
-        contentView.addSubview(dateLabel)
         contentView.addSubview(descriptionLabel)
-        contentView.addSubview(sourceLabel)
+        contentView.addSubview(dateLabel)
         contentView.addSubview(authorLabel)
+        contentView.addSubview(sourceLabel)
         
-        constrain([newsImageView,titleLabel,descriptionLabel,sourceLabel,dateLabel,authorLabel]) { (layoutProxies) -> () in
+        constrain([itemImageView,titleLabel,descriptionLabel,dateLabel,authorLabel,sourceLabel]){ (layoutProxies) -> () in
             
             let imgView = layoutProxies[0]
-            let title = layoutProxies[1]
+            let name = layoutProxies[1]
             let description = layoutProxies[2]
-            let source = layoutProxies[3]
-            let date = layoutProxies[4]
-            let author = layoutProxies[5]
-            
-            imgView.left == (imgView.superview?.left)! + 10
-            imgView.top == (imgView.superview?.top)! + 10
-            imgView.width   == 80
-            imgView.height  == 80
-            align(top: imgView ,title)
-            
-            title.left == imgView.right + 10
-            title.right == title.superview!.right - 40
-            
-            date.centerY == title.centerY
-            date.right == date.superview!.right - 5
-            date.left == date.superview!.right - 50
-            date.height == title.height
-                       
-            author.left == imgView.right + 10
-            author.right == author.superview!.right
-            author.top == title.bottom + 5
-            
-            description.top == author.bottom + 5
-            description.left == description.superview!.left + 10
-            description.right == description.superview!.right
+            let date = layoutProxies[3]
+            let author = layoutProxies[4]
+            let source = layoutProxies[5]
             
             
+            
+            let userInterface = UIDevice.current.userInterfaceIdiom
+            
+            if(userInterface == .pad)
+            {
+                //iPads
+                imgView.width == (imgView.superview!.width) * 0.15
+            }
+            else if(userInterface == .phone)
+            {
+                //iPhone
+                imgView.width == (imgView.superview!.width) * 0.25
+            }
+            
+            imgView.height == imgView.width
+            imgView.left == imgView.superview!.left + 5
+            imgView.top == imgView.superview!.top + 10
+            
+            name.top == name.superview!.top + 5
+            name.left == imgView.right + 5
+            name.right == name.superview!.right - 5
+            name.height == 50
+            
+            source.left == imgView.right + 5
+            source.centerY == imgView.centerY + 5
+            source.right == source.superview!.centerX
+            source.height == 20
+            
+            date.left == source.superview!.centerX + 2
+            date.centerY == imgView.centerY + 5
+            date.right == date.superview!.right
+            date.height == 20
+            
+            
+            
+            author.left == imgView.right + 5
+            author.bottom == imgView.bottom
+          
+            
+            description.right == description.superview!.right - 5
+            description.left == description.superview!.left + 5
+            description.top == imgView.bottom + 10
+            description.bottom == description.superview!.bottom - 10
         }
-        
+    }
+    
+    override func prepareForReuse()
+    {
     }
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool){
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
     }
     
 }
+
+

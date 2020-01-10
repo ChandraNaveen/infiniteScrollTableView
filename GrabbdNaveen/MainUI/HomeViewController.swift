@@ -15,6 +15,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     let tableView = UITableView()
     var data = [DataModel]()
+    var dataIsBeingLoaded = false
+    let activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "newsTableViewCell")
         self.tableView.delegate = self
         self.tableView.dataSource  = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 150
         self.view = tableView
         // Do any additional setup after loading the view.
     }
@@ -36,8 +40,17 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     //MARK:- loadData
        func loadData()
        {
+        
+        if dataIsBeingLoaded == true
+        {
+            return
+        }
+        
+        
+       
+        self.startLoading()
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=dd42a11a001b4867b2af49fcab30f9a2")
-           var header: Dictionary<String, String> = ["Content-Type": "application/json"]
+           let header: Dictionary<String, String> = ["Content-Type": "application/json"]
            let request =  Alamofire.request(url!, method:.get, parameters: nil,encoding: JSONEncoding.default,headers: header)
                    .validate(statusCode: 200..<500)
                    .validate(contentType: ["application/json"])
@@ -50,6 +63,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                    print(json)
                    if let errorMessage = json["errors"][0]["message"].string
                    {
+                    self.stopLoading()
                        print( errorMessage)
                        let actionController: UIAlertController = UIAlertController(title: "Oops", message: "\(errorMessage)", preferredStyle: .alert)
 
@@ -62,12 +76,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                    }
                    else{
                         DispatchQueue.main.async(execute:{
+                             self.stopLoading()
                            let dataDictionary =  json["articles"].arrayObject
                            self.parseData(jsonArray: dataDictionary ?? [])
                        })
                    }
                case .failure(let error):
-                 
+                self.stopLoading()
                    print("Failed to load \(error.localizedDescription)")
                    let actionVC: UIAlertController = UIAlertController(title: "Oops", message: "\(error.localizedDescription)", preferredStyle: .alert)
                    let cancelAction: UIAlertAction = UIAlertAction(title: "Ok", style: .cancel) {
@@ -86,8 +101,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        // parse data
        func parseData(jsonArray:Array<Any>)
        {
-
-
            var tempArray = [DataModel]()
            let json = JSON(jsonArray)
 
@@ -105,7 +118,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                    let dataModel = DataModel(title: title, author: author, date: date, imgURL: imgURL, source: source, desc: desc)
                    tempArray.append(dataModel)
            }
-           self.data = tempArray
+           self.data.append(contentsOf: tempArray)
            self.tableView.reloadData()
        }
 
@@ -117,18 +130,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsTableViewCell", for: indexPath) as! NewsTableViewCell
         
-    
         let news = data[indexPath.row]
-        
         cell.titleLabel.text = news.title
         cell.authorLabel.text = news.author
         cell.dateLabel.text = news.date
         cell.sourceLabel.text = news.source
         cell.descriptionLabel.text = news.desc
-        //cell.imageView?.image = news.code
-        
+        let url = URL(string: news.imgURL!)
+        cell.itemImageView.sd_setImage(with: url, completed: nil)
         return cell
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int
@@ -143,14 +153,52 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableView.automaticDimension
+    }
+    
+      func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+      {
+//        if indexPath.row == data.count-1
+//        {
+//            //just randomly call the api
+//            self.loadData()
+//        }
+    }
+    
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+    let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if offsetY > contentHeight - scrollView.frame.size.height {
+               loadData()
+        }
+
+    }
+  
+     // MARK: - HUD
+     func startLoading()
+     {
+        //main flag for continuos load
+        dataIsBeingLoaded = true
+        
+        activityIndicator.center = self.view.center
+        activityIndicator.style = UIActivityIndicatorView.Style.large;
+        activityIndicator.startAnimating();
+        
+
      }
-     */
+
+     func stopLoading(){
+        //main flag for continuos load
+          dataIsBeingLoaded = false
+        
+         activityIndicator.stopAnimating();
+        
+
+     }
+     
     
 }
