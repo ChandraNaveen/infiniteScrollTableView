@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct DataModel {
+struct DataModel:Decodable {
     
     var title: String?
     var author: String?

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class NewsTableViewCell: UITableViewCell {
     
@@ -66,7 +67,7 @@ class NewsTableViewCell: UITableViewCell {
             
             let imgView = layoutProxies[0]
             let title = layoutProxies[1]
-            let descriptionlabel = layoutProxies[2]
+            let description = layoutProxies[2]
             let source = layoutProxies[3]
             let date = layoutProxies[4]
             let author = layoutProxies[5]
@@ -83,17 +84,15 @@ class NewsTableViewCell: UITableViewCell {
             date.centerY == title.centerY
             date.right == date.superview!.right - 5
             date.left == date.superview!.right - 50
-            date.height == namelabel.height
+            date.height == title.height
                        
             author.left == imgView.right + 10
             author.right == author.superview!.right
             author.top == title.bottom + 5
             
-            descriptionlabel.top == author.bottom + 5
-            descriptionlabel.left == description.superView.left + 10
-            descriptionlabel.right == description.superView.right
-            
-        
+            description.top == author.bottom + 5
+            description.left == description.superview!.left + 10
+            description.right == description.superview!.right
             
             
         }
