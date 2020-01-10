@@ -1,0 +1,6 @@
+framework module Pods_GrabbdNaveen_GrabbdNaveenUITests {
+  umbrella header "Pods-GrabbdNaveen-GrabbdNaveenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

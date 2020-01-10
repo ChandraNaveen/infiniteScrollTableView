@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework
+${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

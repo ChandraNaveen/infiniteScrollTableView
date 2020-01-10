@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35E25B783607BBB5F8F1C62E /* Pods_GrabbdNaveenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82873D5EA694362FEE4C1D0E /* Pods_GrabbdNaveenTests.framework */; };
+		5721BA7DE2392BF1F1573642 /* Pods_GrabbdNaveen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5353B568B33DE1C970DDEA9C /* Pods_GrabbdNaveen.framework */; };
+		9CF4569023C8658C00FC3C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF4568F23C8658C00FC3C9A /* AppDelegate.swift */; };
+		9CF4569223C8658C00FC3C9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF4569123C8658C00FC3C9A /* SceneDelegate.swift */; };
+		9CF4569923C8658D00FC3C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF4569823C8658D00FC3C9A /* Assets.xcassets */; };
+		9CF4569C23C8658D00FC3C9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF4569A23C8658D00FC3C9A /* LaunchScreen.storyboard */; };
+		9CF456A723C8658D00FC3C9A /* GrabbdNaveenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456A623C8658D00FC3C9A /* GrabbdNaveenTests.swift */; };
+		9CF456B223C8658D00FC3C9A /* GrabbdNaveenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456B123C8658D00FC3C9A /* GrabbdNaveenUITests.swift */; };
+		9CF456C023C8686D00FC3C9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456BF23C8686D00FC3C9A /* HomeViewController.swift */; };
+		9CF456C223C86FCC00FC3C9A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456C123C86FCC00FC3C9A /* NewsTableViewCell.swift */; };
+		9CF456C523C8769D00FC3C9A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456C423C8769D00FC3C9A /* Model.swift */; };
+		9CF456C823C88D9500FC3C9A /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF456C723C88D9500FC3C9A /* HUD.swift */; };
+		A88FDD83C2200FF1D7D05B56 /* Pods_GrabbdNaveen_GrabbdNaveenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896C1735E6717FA66D91F8C2 /* Pods_GrabbdNaveen_GrabbdNaveenUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CF456A323C8658D00FC3C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF4568423C8658C00FC3C9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF4568B23C8658C00FC3C9A;
+			remoteInfo = GrabbdNaveen;
+		};
+		9CF456AE23C8658D00FC3C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF4568423C8658C00FC3C9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF4568B23C8658C00FC3C9A;
+			remoteInfo = GrabbdNaveen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5353B568B33DE1C970DDEA9C /* Pods_GrabbdNaveen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabbdNaveen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6647B4BB027882C8FE6025E1 /* Pods-GrabbdNaveen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveen.release.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveen/Pods-GrabbdNaveen.release.xcconfig"; sourceTree = "<group>"; };
+		6C9353EC28B1BD12B9B6F727 /* Pods-GrabbdNaveenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveenTests.release.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveenTests/Pods-GrabbdNaveenTests.release.xcconfig"; sourceTree = "<group>"; };
+		79E24FD617C2618F80293B95 /* Pods-GrabbdNaveenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveenTests.debug.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveenTests/Pods-GrabbdNaveenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		82873D5EA694362FEE4C1D0E /* Pods_GrabbdNaveenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabbdNaveenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		896C1735E6717FA66D91F8C2 /* Pods_GrabbdNaveen_GrabbdNaveenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabbdNaveen_GrabbdNaveenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF4568C23C8658C00FC3C9A /* GrabbdNaveen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabbdNaveen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF4568F23C8658C00FC3C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CF4569123C8658C00FC3C9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CF4569823C8658D00FC3C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CF4569B23C8658D00FC3C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CF4569D23C8658D00FC3C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF456A223C8658D00FC3C9A /* GrabbdNaveenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabbdNaveenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF456A623C8658D00FC3C9A /* GrabbdNaveenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabbdNaveenTests.swift; sourceTree = "<group>"; };
+		9CF456A823C8658D00FC3C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF456AD23C8658D00FC3C9A /* GrabbdNaveenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabbdNaveenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF456B123C8658D00FC3C9A /* GrabbdNaveenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabbdNaveenUITests.swift; sourceTree = "<group>"; };
+		9CF456B323C8658D00FC3C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF456BF23C8686D00FC3C9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9CF456C123C86FCC00FC3C9A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		9CF456C423C8769D00FC3C9A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9CF456C723C88D9500FC3C9A /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		D2182872E88297369799DA3B /* Pods-GrabbdNaveen-GrabbdNaveenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveen-GrabbdNaveenUITests.release.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5CE120ED256F72384C42E99 /* Pods-GrabbdNaveen-GrabbdNaveenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveen-GrabbdNaveenUITests.debug.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4B6DE11F73C98C57A7217E8 /* Pods-GrabbdNaveen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabbdNaveen.debug.xcconfig"; path = "Target Support Files/Pods-GrabbdNaveen/Pods-GrabbdNaveen.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CF4568923C8658C00FC3C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5721BA7DE2392BF1F1573642 /* Pods_GrabbdNaveen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF4569F23C8658D00FC3C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E25B783607BBB5F8F1C62E /* Pods_GrabbdNaveenTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF456AA23C8658D00FC3C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88FDD83C2200FF1D7D05B56 /* Pods_GrabbdNaveen_GrabbdNaveenUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8153F5B8A3EF10C82A77F588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5353B568B33DE1C970DDEA9C /* Pods_GrabbdNaveen.framework */,
+				896C1735E6717FA66D91F8C2 /* Pods_GrabbdNaveen_GrabbdNaveenUITests.framework */,
+				82873D5EA694362FEE4C1D0E /* Pods_GrabbdNaveenTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CF4568323C8658C00FC3C9A = {
+			isa = PBXGroup;
+			children = (
+				9CF456C723C88D9500FC3C9A /* HUD.swift */,
+				9CF4568E23C8658C00FC3C9A /* GrabbdNaveen */,
+				9CF456A523C8658D00FC3C9A /* GrabbdNaveenTests */,
+				9CF456B023C8658D00FC3C9A /* GrabbdNaveenUITests */,
+				9CF4568D23C8658C00FC3C9A /* Products */,
+				E5421B5ECF4ADD1205429259 /* Pods */,
+				8153F5B8A3EF10C82A77F588 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CF4568D23C8658C00FC3C9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CF4568C23C8658C00FC3C9A /* GrabbdNaveen.app */,
+				9CF456A223C8658D00FC3C9A /* GrabbdNaveenTests.xctest */,
+				9CF456AD23C8658D00FC3C9A /* GrabbdNaveenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF4568E23C8658C00FC3C9A /* GrabbdNaveen */ = {
+			isa = PBXGroup;
+			children = (
+				9CF4568F23C8658C00FC3C9A /* AppDelegate.swift */,
+				9CF4569123C8658C00FC3C9A /* SceneDelegate.swift */,
+				9CF4569823C8658D00FC3C9A /* Assets.xcassets */,
+				9CF4569A23C8658D00FC3C9A /* LaunchScreen.storyboard */,
+				9CF4569D23C8658D00FC3C9A /* Info.plist */,
+				9CF456C323C875D800FC3C9A /* MainUI */,
+			);
+			path = GrabbdNaveen;
+			sourceTree = "<group>";
+		};
+		9CF456A523C8658D00FC3C9A /* GrabbdNaveenTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF456A623C8658D00FC3C9A /* GrabbdNaveenTests.swift */,
+				9CF456A823C8658D00FC3C9A /* Info.plist */,
+			);
+			path = GrabbdNaveenTests;
+			sourceTree = "<group>";
+		};
+		9CF456B023C8658D00FC3C9A /* GrabbdNaveenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF456B123C8658D00FC3C9A /* GrabbdNaveenUITests.swift */,
+				9CF456B323C8658D00FC3C9A /* Info.plist */,
+			);
+			path = GrabbdNaveenUITests;
+			sourceTree = "<group>";
+		};
+		9CF456C323C875D800FC3C9A /* MainUI */ = {
+			isa = PBXGroup;
+			children = (
+				9CF456BF23C8686D00FC3C9A /* HomeViewController.swift */,
+				9CF456C123C86FCC00FC3C9A /* NewsTableViewCell.swift */,
+				9CF456C423C8769D00FC3C9A /* Model.swift */,
+			);
+			path = MainUI;
+			sourceTree = "<group>";
+		};
+		E5421B5ECF4ADD1205429259 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4B6DE11F73C98C57A7217E8 /* Pods-GrabbdNaveen.debug.xcconfig */,
+				6647B4BB027882C8FE6025E1 /* Pods-GrabbdNaveen.release.xcconfig */,
+				D5CE120ED256F72384C42E99 /* Pods-GrabbdNaveen-GrabbdNaveenUITests.debug.xcconfig */,
+				D2182872E88297369799DA3B /* Pods-GrabbdNaveen-GrabbdNaveenUITests.release.xcconfig */,
+				79E24FD617C2618F80293B95 /* Pods-GrabbdNaveenTests.debug.xcconfig */,
+				6C9353EC28B1BD12B9B6F727 /* Pods-GrabbdNaveenTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CF4568B23C8658C00FC3C9A /* GrabbdNaveen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF456B623C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveen" */;
+			buildPhases = (
+				2AE24F73EB34D613F18F177C /* [CP] Check Pods Manifest.lock */,
+				9CF4568823C8658C00FC3C9A /* Sources */,
+				9CF4568923C8658C00FC3C9A /* Frameworks */,
+				9CF4568A23C8658C00FC3C9A /* Resources */,
+				64C5E4B37FB022BEB91C5324 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrabbdNaveen;
+			productName = GrabbdNaveen;
+			productReference = 9CF4568C23C8658C00FC3C9A /* GrabbdNaveen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CF456A123C8658D00FC3C9A /* GrabbdNaveenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF456B923C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveenTests" */;
+			buildPhases = (
+				1749B6BC610D5EBF77DC64D2 /* [CP] Check Pods Manifest.lock */,
+				9CF4569E23C8658D00FC3C9A /* Sources */,
+				9CF4569F23C8658D00FC3C9A /* Frameworks */,
+				9CF456A023C8658D00FC3C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF456A423C8658D00FC3C9A /* PBXTargetDependency */,
+			);
+			name = GrabbdNaveenTests;
+			productName = GrabbdNaveenTests;
+			productReference = 9CF456A223C8658D00FC3C9A /* GrabbdNaveenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CF456AC23C8658D00FC3C9A /* GrabbdNaveenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF456BC23C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveenUITests" */;
+			buildPhases = (
+				12EFE6A65B2A9E70C5EE186C /* [CP] Check Pods Manifest.lock */,
+				9CF456A923C8658D00FC3C9A /* Sources */,
+				9CF456AA23C8658D00FC3C9A /* Frameworks */,
+				9CF456AB23C8658D00FC3C9A /* Resources */,
+				00B6FD50AA06FE1D8A23569B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF456AF23C8658D00FC3C9A /* PBXTargetDependency */,
+			);
+			name = GrabbdNaveenUITests;
+			productName = GrabbdNaveenUITests;
+			productReference = 9CF456AD23C8658D00FC3C9A /* GrabbdNaveenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CF4568423C8658C00FC3C9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Naveen Chandra";
+				TargetAttributes = {
+					9CF4568B23C8658C00FC3C9A = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					9CF456A123C8658D00FC3C9A = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9CF4568B23C8658C00FC3C9A;
+					};
+					9CF456AC23C8658D00FC3C9A = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9CF4568B23C8658C00FC3C9A;
+					};
+				};
+			};
+			buildConfigurationList = 9CF4568723C8658C00FC3C9A /* Build configuration list for PBXProject "GrabbdNaveen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CF4568323C8658C00FC3C9A;
+			productRefGroup = 9CF4568D23C8658C00FC3C9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CF4568B23C8658C00FC3C9A /* GrabbdNaveen */,
+				9CF456A123C8658D00FC3C9A /* GrabbdNaveenTests */,
+				9CF456AC23C8658D00FC3C9A /* GrabbdNaveenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CF4568A23C8658C00FC3C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF4569C23C8658D00FC3C9A /* LaunchScreen.storyboard in Resources */,
+				9CF4569923C8658D00FC3C9A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF456A023C8658D00FC3C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF456AB23C8658D00FC3C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B6FD50AA06FE1D8A23569B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen-GrabbdNaveenUITests/Pods-GrabbdNaveen-GrabbdNaveenUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12EFE6A65B2A9E70C5EE186C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrabbdNaveen-GrabbdNaveenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1749B6BC610D5EBF77DC64D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrabbdNaveenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AE24F73EB34D613F18F177C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrabbdNaveen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64C5E4B37FB022BEB91C5324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen/Pods-GrabbdNaveen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen/Pods-GrabbdNaveen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrabbdNaveen/Pods-GrabbdNaveen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CF4568823C8658C00FC3C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF456C523C8769D00FC3C9A /* Model.swift in Sources */,
+				9CF4569023C8658C00FC3C9A /* AppDelegate.swift in Sources */,
+				9CF456C223C86FCC00FC3C9A /* NewsTableViewCell.swift in Sources */,
+				9CF456C823C88D9500FC3C9A /* HUD.swift in Sources */,
+				9CF4569223C8658C00FC3C9A /* SceneDelegate.swift in Sources */,
+				9CF456C023C8686D00FC3C9A /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF4569E23C8658D00FC3C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF456A723C8658D00FC3C9A /* GrabbdNaveenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF456A923C8658D00FC3C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF456B223C8658D00FC3C9A /* GrabbdNaveenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CF456A423C8658D00FC3C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF4568B23C8658C00FC3C9A /* GrabbdNaveen */;
+			targetProxy = 9CF456A323C8658D00FC3C9A /* PBXContainerItemProxy */;
+		};
+		9CF456AF23C8658D00FC3C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF4568B23C8658C00FC3C9A /* GrabbdNaveen */;
+			targetProxy = 9CF456AE23C8658D00FC3C9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CF4569A23C8658D00FC3C9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF4569B23C8658D00FC3C9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CF456B423C8658D00FC3C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CF456B523C8658D00FC3C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CF456B723C8658D00FC3C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4B6DE11F73C98C57A7217E8 /* Pods-GrabbdNaveen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CF456B823C8658D00FC3C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6647B4BB027882C8FE6025E1 /* Pods-GrabbdNaveen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CF456BA23C8658D00FC3C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E24FD617C2618F80293B95 /* Pods-GrabbdNaveenTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrabbdNaveen.app/GrabbdNaveen";
+			};
+			name = Debug;
+		};
+		9CF456BB23C8658D00FC3C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C9353EC28B1BD12B9B6F727 /* Pods-GrabbdNaveenTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrabbdNaveen.app/GrabbdNaveen";
+			};
+			name = Release;
+		};
+		9CF456BD23C8658D00FC3C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5CE120ED256F72384C42E99 /* Pods-GrabbdNaveen-GrabbdNaveenUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GrabbdNaveen;
+			};
+			name = Debug;
+		};
+		9CF456BE23C8658D00FC3C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2182872E88297369799DA3B /* Pods-GrabbdNaveen-GrabbdNaveenUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrabbdNaveenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.GrabbdNaveenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GrabbdNaveen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CF4568723C8658C00FC3C9A /* Build configuration list for PBXProject "GrabbdNaveen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF456B423C8658D00FC3C9A /* Debug */,
+				9CF456B523C8658D00FC3C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF456B623C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF456B723C8658D00FC3C9A /* Debug */,
+				9CF456B823C8658D00FC3C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF456B923C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF456BA23C8658D00FC3C9A /* Debug */,
+				9CF456BB23C8658D00FC3C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF456BC23C8658D00FC3C9A /* Build configuration list for PBXNativeTarget "GrabbdNaveenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF456BD23C8658D00FC3C9A /* Debug */,
+				9CF456BE23C8658D00FC3C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CF4568423C8658C00FC3C9A /* Project object */;
+}

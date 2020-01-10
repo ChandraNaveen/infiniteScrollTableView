@@ -10,13 +10,14 @@ import UIKit
 import Alamofire
 import SDWebImage
 import SwiftyJSON
+import PKHUD
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let tableView = UITableView()
     var data = [DataModel]()
     var dataIsBeingLoaded = false
-    let activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView();
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -184,9 +185,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //main flag for continuos load
         dataIsBeingLoaded = true
         
-        activityIndicator.center = self.view.center
-        activityIndicator.style = UIActivityIndicatorView.Style.large;
-        activityIndicator.startAnimating();
+        HUD.show(.progress)
+        
+      
         
 
      }
@@ -195,9 +196,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //main flag for continuos load
           dataIsBeingLoaded = false
         
-         activityIndicator.stopAnimating();
+        HUD.hide()
         
-
+    
      }
      
     
